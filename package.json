@@ -1,0 +1,31 @@
+{
+  "name": "rio-olympics-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard --verbose | snazzy",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js",
+    "wt-bundle": "wt-bundle --output ./build/rio-olympics-api.js ./webtask/rio-olympics-api.js",
+    "deploy": "npm run wt-bundle && wt create ./build/rio-olympics-api.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "webtask-bundle": "^2.1.1",
+    "wt-cli": "^3.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.0",
+    "snazzy": "^4.0.1",
+    "standard": "^7.1.2"
+  },
+  "standard": {
+    "ignore": ["/build"]
+  }
+}
